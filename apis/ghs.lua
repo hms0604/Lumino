@@ -79,6 +79,7 @@ end
 --Writes a line of chars
 --Returns string on error
 --Input: str xy, num pos, str char
+--[ This function is not working (made poorley)
 function draw(xy, pos, char)
     --Check for valid input
     if not xy == "x" or not xy == "y" then
@@ -104,7 +105,7 @@ function draw(xy, pos, char)
         end
     end
 end
-
+]--
 
 
 
