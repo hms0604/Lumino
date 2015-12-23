@@ -1,0 +1,3 @@
+--Lumnio Common API
+--Do not redistrubute
+--Editing this file will create damage to all installed Lumino programs.
