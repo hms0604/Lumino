@@ -7,7 +7,7 @@
 --Does not accept values
 function resetTerm()
     term.setCursorPos(1,1)
-    term.claer()
+    term.clear()
 end
 
 --Creates full double line.
