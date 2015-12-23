@@ -79,7 +79,7 @@ end
 --Writes a line of chars
 --Returns string on error
 --Input: str xy, num pos, str char
---[ This function is not working (made poorley)
+--[[ This function is not working (made poorley)
 function draw(xy, pos, char)
     --Check for valid input
     if not xy == "x" or not xy == "y" then
@@ -93,33 +93,16 @@ function draw(xy, pos, char)
         term.setCursorPos(pos, 1)
         xt, yt = term.getSize()
         for printPos = 1, xt do
-			term.setCursorPos(pos, printPos)
+      term.setCursorPos(pos, printPos)
             io.write(char)
         end
     else
         term.setCursorPos(1, pos)
         xt, yt = term.getSize()
-        for printPos 1, yt do
-			term.setPos(printPos, pos)
+        for printPos = 1, yt do
+      term.setPos(printPos, pos)
             io.write(char)
         end
     end
 end
-]--
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+]]--
