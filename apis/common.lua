@@ -58,4 +58,41 @@ function appendFile(dir, fileName, toWrite)
  
  end
  
+ --Returns Errors if applicalbe & Unpacked table of read file
+ function readFile(dir, fileName, lineRange)
+ 
+  assert(type(dir) == "string", "Error @ readFile(dir, fileName, lineRange) - dir must be type string")
+  assert(type(fileName) == "string", "Error @ readFile(dir, fileName, lineRange) - fileName must be type string")
+  assert(type(toWrite) == "number", "Error @ readFile(dir, fileName, lineRange) - toWrite must be type number")
+  
+  stored = {}
+  
+  if string.byte(dir, dirlen) == 47 then
+    finalDir = dir
+  else
+    finalDir = dir.."/"
+  end
+  
+  assert(fs.exists(dir..fileName) == false, "Error @ readFile(dir, fileName, lineRange) - dir/fileName must be a valid directory/file name")
+
+  file = io.open(finalDir..fileName, "r")
+  
+  for i = 1, lineRange do 
+    store = file:read()
+    stored[i] = store
+  end
+  
+  return unpack(stored)
+  
+ end
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
